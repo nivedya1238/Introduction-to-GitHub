@@ -1,26 +1,27 @@
 
-var box;
+var square;
 
 function setup() {
   createCanvas(400,400);
-  box = createSprite(100, 150, 50, 50);
-  box.shapeColor = "brown"
+  square = createSprite(100, 150, 50, 50);
+  square.shapeColor = "lightpink"
 }
 
 function draw() 
 {
   background(30);
+  background("black")
   if(keyIsDown(RIGHT_ARROW)){
-    box.x = box.x + 3
+  background('yellow');
   }
   if(keyIsDown(LEFT_ARROW)){
-    box.x = box.x - 3
+    background('green')
   }
-  if(keyDown(UP_ARROW)){
-    box.y = box.y - 3
+  if(keyIsDown(UP_ARROW)){
+    background('blue')
   }
   if(keyIsDown(DOWN_ARROW)){
-    box.y = box.y + 3
+    background('purple')
   }
   drawSprites();
 }
